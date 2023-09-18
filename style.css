@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700&family=Overpass+Mono:wght@400;700&family=Playfair+Display+SC:wght@400;700&display=swap');
+
+:root {
+  --inter: Inter, 'sans-serif';
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+  --primaryColor: #040404;
+  --secondaryColor: #FFC915;
+  --tertiaryColor: #FAFAFA;
+  --radius: 8px;
+  --linear-gradient: linear-gradient(129deg, rgba(255, 201, 21, 0.40) 0%, rgba(255, 243, 191, 0.05) 100%);
+  --text-shadow: 0px 4px 4px rgba(4, 4, 4, 0.25);
+  --drop-shadow: 2px 4px 4px rgba(4, 4, 4, 0.25);
+}
+
+
+* {
+  font-family: var(--inter);
+  font-weight: var(--regular);
+  color: var(--primaryColor);
+  background: var(--tertiary);
+}
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 39.11px;
+  background: rgba(252, 252, 252, 0.50);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 14.22px;
+  background: transparent;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+main > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background, .foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.foreground-phone {
+  position: absolute;
+  top: 80px;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-10px) scale(2);
+}
+
+.foreground {
+  transform: translateZ(-5px) scale(1.5);
+}
+
+.foreground-phone {
+  transform: translate(-2.5px) scale(1);
+}
+
+main * h1{
+  position: absolute;
+  margin: 0;
+  top: 80px;
+  font-weight: var(--bold);
+  font-size: 11.5vw;
+  text-shadow: var(--text-shadow);
+}
+
+h1 > span {
+  color: var(--secondaryColor);
+  font-weight: var(--bold);
+  text-shadow: var(--text-shadow);
+}
+
+section {
+  position: relative;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  background: var(--tertiaryColor);
+}
+
+section > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.specs-content {
+  text-align: center;
+}
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  background: red;
+}
