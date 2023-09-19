@@ -31,7 +31,7 @@ html, body {
 header {
   position: sticky;
   top: 0;
-  height: 39.11px;
+  height: clamp(35px, 12vw, 60px);
   backdrop-filter: blur(10px);
   background: rgba(252, 252, 252, 0.2);
   -webkit-backdrop-filter: blur(10px);
@@ -162,25 +162,36 @@ div > p {
 }
 
 div > button {
-  background-color: red;
+  background-color: #ff4500;
   border-radius: var(--radius);
   border-style: none;
+  box-shadow: 0px 3px 6px rgba(4, 4, 4, 0.35);;
   width: 74px;
   height: 24.13px;
   color: var(--tertiaryColor);
   margin: 8px 0;
+  cursor: pointer;
+}
+
+div > button:hover {
+  transform: translateY(2px);
+  background: var(--tertiaryColor);
+  color: #ff4500;
+  box-shadow: 0px 3px 3px rgba(4, 4, 4, 0.35);
 }
 
 footer {
   position: relative;
   /* top: 20px; */
-  height: 100%;
-  background: green;
+  height: 30%;
+  background: var(--secondaryColor);
 }
 
 @media screen and (min-width: 768px) {
   section {
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    height: 100%;
   }
 }
