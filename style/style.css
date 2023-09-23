@@ -47,7 +47,7 @@ header > div {
   background: transparent;
 }
 
-.burger-container {
+.menu-container {
   position: relative;
   top: -20px;
   width: 100%;
@@ -55,19 +55,22 @@ header > div {
 
 .menu-toggle {
   position: absolute;
-  top: -13px;
+  top: 8px;
   right: 0;
 }
 
 .menu-toggle input {
+  position: absolute;
   width: 15px;
   height: 15px;
   opacity: 0;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .menu-toggle span {
   display: block;
-  width: 26;
+  width: 22px;
   height: 3px;
   margin-top: 3px;
   background: var(--primaryColor);
@@ -129,7 +132,7 @@ header > div {
 }
 
 .menu a:active, a:hover {
-  width: 80%;
+  /* width: 80%; */
   background: var(--secondaryColor);
 }
 
@@ -267,6 +270,11 @@ div > button {
   cursor: pointer;
 }
 
+.buy-button {
+  text-decoration: none;
+  color: var(--tertiaryColor);
+}
+
 div > button:hover {
   transform: translateY(2px);
   background: var(--tertiaryColor);
@@ -297,6 +305,35 @@ footer h3, p {
     height: 100%;
     /* width: 668px; */
   }
+
+  .menu-toggle {
+    top: -13px;
+  }
+
+  .menu-toggle span {
+    display: none;
+  }
+
+  .menu-toggle input {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    flex-direction: row;
+    padding: 0;
+    margin-top:12px;
+    width: auto;
+    height: auto;
+    background: transparent;
+    transform: none;
+    transition: none;
+  }
+
+  /* .menu a:hover {
+    width: 100%;
+  } */
+
 }
 
 @media screen and (min-width: 971px) {
